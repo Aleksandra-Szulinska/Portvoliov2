@@ -1,0 +1,190 @@
+body{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color:white;
+background-color: black;
+margin:30px;
+}
+
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .10em solid rgb(255, 255, 255);
+    animation: typing 2s steps(20);
+}
+.BacgroungIMG{
+width:105%;
+position:fixed;
+top:0;
+left:-2rem;
+z-index:-1;
+animation:fade-in linear;
+animation-timeline:scroll();
+}
+
+@keyframes fade-in {
+    from { scale:1; opacity:1;}
+    to { scale:2; opacity:0.1;}
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 15% }
+}
+
+
+.middleTitle{
+text-align: center;
+}
+.lineDetail {
+padding:0px;
+height:1px;
+width:4rem;
+background-color: #747272; 
+
+}
+h1{
+font-size:53px;
+margin:10rem 0px;
+}
+.project-gallery{
+position:relative;
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap:4rem;
+width:50%;
+align-items: center;
+text-align: center;
+}
+    .circular-image {
+    width: 200px; 
+    height: 200px; 
+    margin: 5px 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    }
+        .circular-image img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        }
+
+    #project{
+    background-color: rgba(255, 255, 255, 0.664);
+    color: black;
+    align-items: center;
+    }       
+    #project p, h3{text-align: center;}
+    .button-container{text-align: center;}
+        button{
+        margin: 10px;
+        padding: 10px;
+        border: solid 3px black;
+        transition: transform 0.3s ease;
+        }
+        button:hover{
+            background-color:black;
+            color: white;
+            cursor: pointer;
+            transform: scale(1.1);
+            }
+    
+
+#contact-me{text-align: center;}
+label{margin: 10px;}
+
+
+
+#aboutMe{
+width: 70%;
+position:block;
+float: left;
+text-align: left;
+margin-bottom:5rem;
+}
+.aboutMeTitle{
+text-align:left;
+}
+.profileIMG{
+position:block;
+width:9rem;
+float: right;
+margin-top:8rem;
+border-radius:1rem;
+box-shadow: 0px 0px 10px rgb(157, 153, 153);
+}
+
+#FindMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.915)
+}
+
+.FindMeTitle {
+    margin: 0;
+}
+
+.iconsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+.iconsDiv a {margin-left: 10px;}
+.iconsDiv a:first-child {margin-left: 35rem; }
+.iconsDiv a:last-child {margin-right: 0;}
+i{margin-left:4rem}
+.profileIMGPhone{display:none;}
+@media only screen and (max-width:750px){
+    body{margin:5px;}
+    .BacgroungIMG{
+        width:110%;
+        position:fixed;
+        top:0;
+        left:-2rem;
+        z-index:-1;
+        animation:fade-in linear;
+        animation-timeline:scroll();
+        }
+        @keyframes fade-in {from { scale:1; opacity:1;}to { scale:2; opacity:0.1;}}
+    h1{
+    font-size:45px;
+    margin:2rem;
+    }
+    .project-gallery{grid-template-columns: repeat(1, 1fr);}
+    .circular-image {
+    position: relative;
+    margin:1rem 2rem;
+    width: 150px; 
+    height: 150px; 
+    }
+    #project{
+    margin:1.1rem;
+    width:140%;
+    }       
+    #project p, h3{ margin:10px; font-size: 13px;}
+    #contact-me{margin: 10px;}
+    #aboutMe{
+        margin:10px;
+        width: 90%;
+        position:block;
+        float: left;
+        text-align: left;
+        margin-bottom:2rem;
+        }
+        .profileIMG{
+        display: none;
+        }
+        .FindMeTitle {margin: 0;}
+        .iconsDiv a {margin-left:2rem;}
+        .iconsDiv a:first-child { margin-left: 0rem; }
+        .iconsDiv a:last-child {margin-right: 0; }
+        i{margin-left:0.5rem;}
+        .profileIMGPhone{position: relative;display:block; width:150px; border-radius:1rem; margin-right: 20%;}     
+}
